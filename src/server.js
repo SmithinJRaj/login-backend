@@ -23,11 +23,6 @@ app.use(rateLimit({
 // Routes
 app.use("/auth", authRoutes);
 
-// Protected route example
-app.get("/profile", authMiddleware, (req, res) => {
-  res.json(req.user);
-});
-
 // Health check
 app.get("/", (req, res) => res.send("API is running"));
 
